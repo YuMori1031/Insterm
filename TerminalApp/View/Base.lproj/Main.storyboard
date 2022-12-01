@@ -113,8 +113,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="22" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vrm-94-VKJ">
-                                                        <rect key="frame" x="0.0" y="43.5" width="200" height="56.5"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="43" width="200" height="57"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
