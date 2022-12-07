@@ -25,12 +25,8 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmV-sH-F4r">
-                                <rect key="frame" x="57" y="802" width="300" height="50"/>
+                                <rect key="frame" x="30" y="802" width="354" height="50"/>
                                 <color key="backgroundColor" systemColor="systemMintColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="mJv-iO-xZO"/>
-                                    <constraint firstAttribute="height" constant="50" id="zT4-yX-OGy"/>
-                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="接続開始">
@@ -46,7 +42,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="suD-wv-xfQ">
                                                 <rect key="frame" x="107" y="0.0" width="200" height="100"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IPアドレス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgr-HC-ZM7">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ホスト名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgr-HC-ZM7">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="57"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -66,7 +62,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1OJ-ez-EQy">
                                                 <rect key="frame" x="107" y="105" width="200" height="100"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ログインID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FI9-YX-R7q">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザー名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FI9-YX-R7q">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="57"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -142,10 +138,11 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nmV-sH-F4r" secondAttribute="bottom" constant="10" id="9MZ-Wg-LPo"/>
                             <constraint firstItem="f9I-qP-36a" firstAttribute="top" secondItem="3cV-rd-oOR" secondAttribute="bottom" id="Cg4-dh-6Hl"/>
-                            <constraint firstItem="nmV-sH-F4r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FR7-cA-xrL"/>
+                            <constraint firstItem="nmV-sH-F4r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Eo0-br-o3S"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f9I-qP-36a" secondAttribute="trailing" id="JO5-9i-Vmx"/>
                             <constraint firstItem="3cV-rd-oOR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QC4-Za-FCq"/>
                             <constraint firstItem="nmV-sH-F4r" firstAttribute="top" secondItem="f9I-qP-36a" secondAttribute="bottom" constant="10" id="cu6-Ap-AyK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nmV-sH-F4r" secondAttribute="trailing" constant="30" id="fYb-Yu-gfQ"/>
                             <constraint firstItem="f9I-qP-36a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hUD-ks-OjR"/>
                             <constraint firstItem="3cV-rd-oOR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vSf-hc-2Id"/>
                         </constraints>
@@ -153,6 +150,10 @@
                     <navigationItem key="navigationItem" id="Htt-wG-Kpw"/>
                     <connections>
                         <outlet property="connectButton" destination="nmV-sH-F4r" id="HRS-PK-Gff"/>
+                        <outlet property="hostname" destination="rmj-g7-6BO" id="cdw-Wm-YZx"/>
+                        <outlet property="password" destination="n7O-uD-WPY" id="gjP-sL-R7y"/>
+                        <outlet property="port" destination="Vrm-94-VKJ" id="mqF-Zp-Kyo"/>
+                        <outlet property="username" destination="bZ8-Gs-lQW" id="m98-MD-8z9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
