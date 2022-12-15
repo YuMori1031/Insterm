@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2006A281294A71B500F7A288 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006A280294A71B500F7A288 /* Alert.swift */; };
+		209959B12946676300CCED84 /* SwiftTerm in Frameworks */ = {isa = PBXBuildFile; productRef = 209959B02946676300CCED84 /* SwiftTerm */; };
+		209959B329466D6C00CCED84 /* SSHConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209959B229466D6C00CCED84 /* SSHConnection.swift */; };
 		20A3FB0329369E56008E5FBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A3FB0229369E56008E5FBB /* AppDelegate.swift */; };
 		20A3FB0529369E56008E5FBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A3FB0429369E56008E5FBB /* SceneDelegate.swift */; };
 		20A3FB0A29369E56008E5FBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A3FB0829369E56008E5FBB /* Main.storyboard */; };
@@ -15,9 +18,12 @@
 		20A3FB192937F299008E5FBB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A3FB182937F299008E5FBB /* LoginViewController.swift */; };
 		20A3FB1B2937F2D3008E5FBB /* Terminal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A3FB1A2937F2D3008E5FBB /* Terminal.storyboard */; };
 		20A3FB1D2937F30E008E5FBB /* TerminalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A3FB1C2937F30E008E5FBB /* TerminalViewController.swift */; };
+		CD2E16F53AD4A714BB139BF1 /* Pods_TerminalApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41173A4EEE4F53619B6BC610 /* Pods_TerminalApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2006A280294A71B500F7A288 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		209959B229466D6C00CCED84 /* SSHConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHConnection.swift; sourceTree = "<group>"; };
 		20A3FAFF29369E56008E5FBB /* TerminalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerminalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A3FB0229369E56008E5FBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20A3FB0429369E56008E5FBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +34,9 @@
 		20A3FB182937F299008E5FBB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		20A3FB1A2937F2D3008E5FBB /* Terminal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Terminal.storyboard; sourceTree = "<group>"; };
 		20A3FB1C2937F30E008E5FBB /* TerminalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalViewController.swift; sourceTree = "<group>"; };
+		41173A4EEE4F53619B6BC610 /* Pods_TerminalApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TerminalApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		482461BB66FD3F7305CA69DF /* Pods-TerminalApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TerminalApp.release.xcconfig"; path = "Target Support Files/Pods-TerminalApp/Pods-TerminalApp.release.xcconfig"; sourceTree = "<group>"; };
+		D1D4D82F63B3CDB357EE25EA /* Pods-TerminalApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TerminalApp.debug.xcconfig"; path = "Target Support Files/Pods-TerminalApp/Pods-TerminalApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				209959B12946676300CCED84 /* SwiftTerm in Frameworks */,
+				CD2E16F53AD4A714BB139BF1 /* Pods_TerminalApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +57,8 @@
 			children = (
 				20A3FB0129369E56008E5FBB /* TerminalApp */,
 				20A3FB0029369E56008E5FBB /* Products */,
+				602E651A82A91F67DFB927FC /* Pods */,
+				7297075B4A9BF6778B915D61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +75,8 @@
 			children = (
 				20A3FB0229369E56008E5FBB /* AppDelegate.swift */,
 				20A3FB0429369E56008E5FBB /* SceneDelegate.swift */,
+				209959B229466D6C00CCED84 /* SSHConnection.swift */,
+				2006A280294A71B500F7A288 /* Alert.swift */,
 				20A3FB172937F273008E5FBB /* Controller */,
 				20A3FB162937F1FF008E5FBB /* View */,
 				20A3FB0B29369E59008E5FBB /* Assets.xcassets */,
@@ -89,6 +104,23 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		602E651A82A91F67DFB927FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1D4D82F63B3CDB357EE25EA /* Pods-TerminalApp.debug.xcconfig */,
+				482461BB66FD3F7305CA69DF /* Pods-TerminalApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7297075B4A9BF6778B915D61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41173A4EEE4F53619B6BC610 /* Pods_TerminalApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,15 +128,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20A3FB1329369E59008E5FBB /* Build configuration list for PBXNativeTarget "TerminalApp" */;
 			buildPhases = (
+				F7BA140366DE69AFE2D70593 /* [CP] Check Pods Manifest.lock */,
 				20A3FAFB29369E56008E5FBB /* Sources */,
 				20A3FAFC29369E56008E5FBB /* Frameworks */,
 				20A3FAFD29369E56008E5FBB /* Resources */,
+				2E6097D29671AA554BF4E195 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TerminalApp;
+			packageProductDependencies = (
+				209959B02946676300CCED84 /* SwiftTerm */,
+			);
 			productName = TerminalApp;
 			productReference = 20A3FAFF29369E56008E5FBB /* TerminalApp.app */;
 			productType = "com.apple.product-type.application";
@@ -133,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 20A3FAF629369E56008E5FBB;
+			packageReferences = (
+				209959AF2946676300CCED84 /* XCRemoteSwiftPackageReference "SwiftTerm" */,
+			);
 			productRefGroup = 20A3FB0029369E56008E5FBB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -156,15 +196,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E6097D29671AA554BF4E195 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TerminalApp/Pods-TerminalApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TerminalApp/Pods-TerminalApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TerminalApp/Pods-TerminalApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7BA140366DE69AFE2D70593 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TerminalApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		20A3FAFB29369E56008E5FBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2006A281294A71B500F7A288 /* Alert.swift in Sources */,
 				20A3FB192937F299008E5FBB /* LoginViewController.swift in Sources */,
 				20A3FB0329369E56008E5FBB /* AppDelegate.swift in Sources */,
 				20A3FB1D2937F30E008E5FBB /* TerminalViewController.swift in Sources */,
 				20A3FB0529369E56008E5FBB /* SceneDelegate.swift in Sources */,
+				209959B329466D6C00CCED84 /* SSHConnection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +390,7 @@
 		};
 		20A3FB1429369E59008E5FBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1D4D82F63B3CDB357EE25EA /* Pods-TerminalApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -334,6 +419,7 @@
 		};
 		20A3FB1529369E59008E5FBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 482461BB66FD3F7305CA69DF /* Pods-TerminalApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -382,6 +468,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		209959AF2946676300CCED84 /* XCRemoteSwiftPackageReference "SwiftTerm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/migueldeicaza/SwiftTerm";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		209959B02946676300CCED84 /* SwiftTerm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 209959AF2946676300CCED84 /* XCRemoteSwiftPackageReference "SwiftTerm" */;
+			productName = SwiftTerm;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 20A3FAF729369E56008E5FBB /* Project object */;
 }

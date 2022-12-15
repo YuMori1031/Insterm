@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import SwiftTerm
+import NMSSH
 
 class TerminalViewController: UIViewController {
+    
+    var connection: SSHConnection?
 
     override func viewDidLoad() {
         super.viewDidLoad()
