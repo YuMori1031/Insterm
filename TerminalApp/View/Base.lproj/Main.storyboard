@@ -153,6 +153,7 @@
                         <outlet property="hostname" destination="rmj-g7-6BO" id="cdw-Wm-YZx"/>
                         <outlet property="password" destination="n7O-uD-WPY" id="gjP-sL-R7y"/>
                         <outlet property="port" destination="Vrm-94-VKJ" id="mqF-Zp-Kyo"/>
+                        <outlet property="scrollView" destination="f9I-qP-36a" id="dWo-Ss-6bV"/>
                         <outlet property="username" destination="bZ8-Gs-lQW" id="m98-MD-8z9"/>
                     </connections>
                 </viewController>

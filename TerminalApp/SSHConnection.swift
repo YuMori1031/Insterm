@@ -44,7 +44,6 @@ class SSHConnection {
             session.channel.requestPty = true // 疑似端末を有効化
             session.channel.ptyTerminalType = NMSSHChannelPtyTerminal.xterm // SwiftTermが動作するように端末タイプをxtermに指定
             
-            try session.channel.startShell() // SSH通信を開始
         } else { // SSHセッションが確立できない場合エラーを返す
             throw SSHSessionError.connectFailed
         }
@@ -56,6 +55,15 @@ class SSHConnection {
         session.disconnect()
     }
     
+    // SSH通信開始
+    func startSSHShell() {
+        do {
+            try session.channel.startShell()
+        } catch {
+            print(error)
+        }
+    }
+    
     // SSH上でコマンドを実行、その結果を文字列で取得する処理
     func executeCommand(command: String) -> String {
         let errorPointer: NSErrorPointer = nil
@@ -65,11 +73,17 @@ class SSHConnection {
     
     // 入力されたデータをUTF-8にエンコードして、確立したSSH上へ書き込み
     func write(data: ArraySlice<UInt8>) throws {
-        let letter = String(bytes: data, encoding: .utf8)
+        guard let letter = String(bytes: data, encoding: .utf8) else { return }
+        let new_data = Data(letter.utf8)
+        try session.channel.write(new_data)
+        
+        //let letter = String(bytes: data, encoding: .utf8)
+        /*
         if (letter != nil) {
             let new_data = Data(letter!.utf8)
             try session.channel.write(new_data)
         }
+        */
     }
     
     // 接続中の端末サイズの変更処理
