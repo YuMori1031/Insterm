@@ -52,7 +52,6 @@ class LoginViewController: UIViewController {
     }
 
     @objc func tapButton(_: UIResponder) {
-        
         guard let host = hostname.text, !host.isEmpty, let user = username.text, !user.isEmpty, let pass = password.text, !pass.isEmpty, let portNum = port.text, !portNum.isEmpty else {
             let alert = Alert(title: "入力エラー", message: "全ての項目は必須入力です")
             present(alert.controller, animated: true, completion: nil)
@@ -69,18 +68,17 @@ class LoginViewController: UIViewController {
         // SSH接続処理を実行
         // エラー内容に応じてアラートを表示、処理完了後にインジケーターを停止
         sshQueue?.async {
+            // SSH接続処理が完了後、スコープを抜ける際にインジケーターのアニメーション停止とロード画面を削除
             defer {
                 DispatchQueue.main.async {
                     self.indicator.stopAnimating()
                     self.loadingView.removeFromSuperview()
                 }
             }
+            
             do {
                 try self.session?.connect()
                 DispatchQueue.main.async {
-                    //self.indicator.stopAnimating()
-                    //self.loadingView.removeFromSuperview()
-                    
                     let tv = TerminalViewController.instantiate()
                     
                     tv.connection = self.session // セッション情報をTerminalViewControllerへ値渡し
@@ -89,30 +87,21 @@ class LoginViewController: UIViewController {
                 }
             } catch SSHSessionError.connectFailed {
                 DispatchQueue.main.async {
-                    //self.indicator.stopAnimating()
-                    //self.loadingView.removeFromSuperview()
-                    
                     let alert = Alert(title: "接続エラー", message: "ホストへ接続が出来ませんでした。")
                     self.present(alert.controller, animated: true, completion: nil)
                 }
                 return
             } catch SSHSessionError.authorizationFailed {
                 DispatchQueue.main.async {
-                    //self.indicator.stopAnimating()
-                    //self.loadingView.removeFromSuperview()
-                    
                     let alert = Alert(title: "認証エラー", message: "ホストとの認証に失敗しました。")
                     self.present(alert.controller, animated: true, completion: nil)
-                    
                 }
                 return
             } catch {
                 print(error)
                 return
             }
-            
         }
-        
     }
     
 }
