@@ -32,21 +32,18 @@ class SSHConnection {
     
     // SSH接続処理
     func connect() throws {
-        if(session.connect()) { // SSHセッションを開始
-            session.authenticate(byPassword: password) // パスワード認証を実行
-            
-            // 認証失敗した場合はセッションを閉じてエラーを返す
-            if(!session.isAuthorized) {
-                session.disconnect()
-                throw SSHSessionError.authorizationFailed
-            }
-            
-            session.channel.requestPty = true // 疑似端末を有効化
-            session.channel.ptyTerminalType = NMSSHChannelPtyTerminal.xterm // SwiftTermが動作するように端末タイプをxtermに指定
-            
-        } else { // SSHセッションが確立できない場合エラーを返す
-            throw SSHSessionError.connectFailed
+        guard session.connect() else { throw  SSHSessionError.connectFailed } // SSHセッションが確立できない場合エラーを返す
+        session.authenticate(byPassword: password) // パスワード認証を実行
+        
+        // 認証失敗した場合はセッションを閉じてエラーを返す
+        if(!session.isAuthorized) {
+            session.disconnect()
+            throw SSHSessionError.authorizationFailed
         }
+        
+        session.channel.requestPty = true // 疑似端末を有効化
+        session.channel.ptyTerminalType = NMSSHChannelPtyTerminal.xterm // SwiftTermが動作するように端末タイプをxtermに指定
+        
     }
     
     // SSH切断処理
@@ -76,14 +73,6 @@ class SSHConnection {
         guard let letter = String(bytes: data, encoding: .utf8) else { return }
         let new_data = Data(letter.utf8)
         try session.channel.write(new_data)
-        
-        //let letter = String(bytes: data, encoding: .utf8)
-        /*
-        if (letter != nil) {
-            let new_data = Data(letter!.utf8)
-            try session.channel.write(new_data)
-        }
-        */
     }
     
     // 接続中の端末サイズの変更処理

@@ -7,18 +7,12 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     var session: SSHConnection? // SSHセッション
     var sshQueue: DispatchQueue? // SSH接続処理キュー
-    var indicator = UIActivityIndicatorView() { // インジケーター
-        didSet {
-            indicator.center = view.center
-            indicator.style = .large
-            indicator.color = .white
-            indicator.hidesWhenStopped = true
-        }
-    }
+    
+    var indicator = UIActivityIndicatorView()
     
     let loadingView = UIView(frame: UIScreen.main.bounds) // SSH接続中に表示するためのロード画面
     
@@ -38,17 +32,64 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // インジケーターの表示設定
-        loadingView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-        loadingView.addSubview(indicator) // ロード画面にインジケーターを追加
+        // returnキーでキーボードを非表示にするため、各入力フォームにUITextFieldDelegateを設定
+        hostname.delegate = self
+        username.delegate = self
+        password.delegate = self
         
-        setUpKeyboard()
+        portNumberPadDone() // ポート番号の入力キーにキーボードを閉じるボタンを設定
         
+        showIndicator() // インジケーター表示
+        
+        setDismissKeyboard() // 画面のどこかをタップするとキーボードを閉じる
+        
+        setUpKeyboard() // 入力フォームをタップするとキーボードを入力フォーム下に表示
+    }
+    
+    // テキストフィールド入力時にreturnキーを押すとキーボードを閉じる
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     // 入力フォームがキーボードで隠れないように位置調整
     func setUpKeyboard() {
-        view.keyboardLayoutGuide.topAnchor.constraint(greaterThanOrEqualTo: scrollView.bottomAnchor).isActive = true
+        view.keyboardLayoutGuide.topAnchor.constraint(greaterThanOrEqualTo: scrollView.bottomAnchor, constant: 10).isActive = true
+    }
+    
+    // インジケーター設定
+    func showIndicator() {
+        indicator.center = view.center
+        indicator.style = .large
+        indicator.color = .white
+        indicator.hidesWhenStopped = true
+        
+        loadingView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        
+        loadingView.addSubview(indicator) // ロード画面にインジケーターを追加
+    }
+    
+    func portNumberPadDone() {
+        // inputAccesoryViewに入れるtoolbar
+        let toolbar = UIToolbar()
+        
+        // 完了ボタンを右寄せにする為に、左側を埋めるスペース作成
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        // 完了ボタンを作成
+        let done = UIBarButtonItem(title: "完了", style: .done, target: self, action: #selector(didTapDoneButton))
+        
+        // toolbarのitemsに作成したスペースと完了ボタンを追加
+        toolbar.items = [space, done]
+        toolbar.sizeToFit()
+        
+        // 作成したtoolbarをportのinputAccessoryViewに入れる
+        port.inputAccessoryView = toolbar
+    }
+    
+    // ポート番号入力時に完了ボタンを押すとキーボードを閉じる
+    @objc func didTapDoneButton() {
+        port.resignFirstResponder()
     }
 
     @objc func tapButton(_: UIResponder) {
@@ -80,9 +121,7 @@ class LoginViewController: UIViewController {
                 try self.session?.connect()
                 DispatchQueue.main.async {
                     let tv = TerminalViewController.instantiate()
-                    
                     tv.connection = self.session // セッション情報をTerminalViewControllerへ値渡し
-                    
                     self.navigationController?.pushViewController(tv, animated: true)
                 }
             } catch SSHSessionError.connectFailed {
@@ -103,5 +142,4 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
 }

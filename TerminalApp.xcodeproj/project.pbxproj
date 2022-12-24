@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2006A281294A71B500F7A288 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006A280294A71B500F7A288 /* Alert.swift */; };
+		207F7C43295795B50087F4F4 /* UIViewController+DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207F7C42295795B50087F4F4 /* UIViewController+DismissKeyboard.swift */; };
 		209959B12946676300CCED84 /* SwiftTerm in Frameworks */ = {isa = PBXBuildFile; productRef = 209959B02946676300CCED84 /* SwiftTerm */; };
 		209959B329466D6C00CCED84 /* SSHConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209959B229466D6C00CCED84 /* SSHConnection.swift */; };
 		20A31AEE294D00260049C580 /* SSHTerminalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A31AED294D00260049C580 /* SSHTerminalView.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		2006A280294A71B500F7A288 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		207F7C42295795B50087F4F4 /* UIViewController+DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DismissKeyboard.swift"; sourceTree = "<group>"; };
 		209959B229466D6C00CCED84 /* SSHConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHConnection.swift; sourceTree = "<group>"; };
 		20A31AED294D00260049C580 /* SSHTerminalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHTerminalView.swift; sourceTree = "<group>"; };
 		20A3FAFF29369E56008E5FBB /* TerminalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerminalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +81,7 @@
 				20A3FB0429369E56008E5FBB /* SceneDelegate.swift */,
 				209959B229466D6C00CCED84 /* SSHConnection.swift */,
 				20A31AED294D00260049C580 /* SSHTerminalView.swift */,
+				207F7C42295795B50087F4F4 /* UIViewController+DismissKeyboard.swift */,
 				2006A280294A71B500F7A288 /* Alert.swift */,
 				20A3FB172937F273008E5FBB /* Controller */,
 				20A3FB162937F1FF008E5FBB /* View */,
@@ -252,6 +255,7 @@
 				20A3FB1D2937F30E008E5FBB /* TerminalViewController.swift in Sources */,
 				20A3FB0529369E56008E5FBB /* SceneDelegate.swift in Sources */,
 				209959B329466D6C00CCED84 /* SSHConnection.swift in Sources */,
+				207F7C43295795B50087F4F4 /* UIViewController+DismissKeyboard.swift in Sources */,
 				20A31AEE294D00260049C580 /* SSHTerminalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
