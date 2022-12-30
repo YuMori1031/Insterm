@@ -21,8 +21,7 @@ class SSHTerminalView: TerminalView, TerminalViewDelegate, NMSSHChannelDelegate 
         terminalDelegate = self // TerminalViewDelegateを適用
     }
     
-    // このメソッドの意味がよく分かってません。入れないとXcodeから怒られるので入れてます。
-    // エラー：'required' initializer 'init(coder:)' must be provided by subclass of 'TerminalView'
+    // Swiftの仕様でUIViewを継承したサブクラス（この場合はTerminalViewになる）で、上記のような初期化を定義すると下記メソッドの実装が必須となる模様
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

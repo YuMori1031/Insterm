@@ -122,6 +122,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 DispatchQueue.main.async {
                     let tv = TerminalViewController.instantiate()
                     tv.connection = self.session // セッション情報をTerminalViewControllerへ値渡し
+                    tv.hostname = self.hostname.text // ホスト名をTerminalViewControllerへ値渡し
                     self.navigationController?.pushViewController(tv, animated: true)
                 }
             } catch SSHSessionError.connectFailed {
