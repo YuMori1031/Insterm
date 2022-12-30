@@ -11,19 +11,19 @@ class TerminalViewController: UIViewController {
     
     var connection: SSHConnection!
     var terminalView: SSHTerminalView!
+    var hostname: String!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         
         terminalView = SSHTerminalView(connection: connection, frame: CGRect.zero)
+        navigationItem.title = hostname
         
         view.addSubview(terminalView)
         terminalLayout()
         terminalView.becomeFirstResponder()
         
         terminalView.connection?.startSSHShell()
-        
     }
     
     // 端末の回転を検知した際に画面サイズに合わせて再描画
