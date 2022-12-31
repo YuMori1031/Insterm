@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  TerminalApp
+//  Insterm
 //
 //  Created by Yusuke Mori on 2022/11/30.
 //
