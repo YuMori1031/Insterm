@@ -1,6 +1,6 @@
 //
 //  SSHTerminalView.swift
-//  TerminalApp
+//  Insterm
 //
 //  Created by Yusuke Mori on 2022/12/17.
 //
