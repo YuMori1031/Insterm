@@ -26,6 +26,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var connectButton: UIButton! {
         didSet {
             connectButton.addTarget(self, action: #selector(tapButton(_:)), for: .touchUpInside)
+            
+            // ボタンを角丸にする
+            connectButton.layer.cornerRadius = connectButton.bounds.midY
+            
+            // ボタンに影をつける
+            connectButton.layer.shadowColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+            connectButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+            connectButton.layer.shadowOpacity = 0.7
+            connectButton.layer.shadowRadius = 10
         }
     }
     
