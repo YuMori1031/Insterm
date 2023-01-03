@@ -20,10 +20,12 @@
 		20A3FB192937F299008E5FBB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A3FB182937F299008E5FBB /* LoginViewController.swift */; };
 		20A3FB1B2937F2D3008E5FBB /* Terminal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A3FB1A2937F2D3008E5FBB /* Terminal.storyboard */; };
 		20A3FB1D2937F30E008E5FBB /* TerminalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A3FB1C2937F30E008E5FBB /* TerminalViewController.swift */; };
-		CD2E16F53AD4A714BB139BF1 /* Pods_TerminalApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41173A4EEE4F53619B6BC610 /* Pods_TerminalApp.framework */; };
+		C03B561BC436EF2350BC8918 /* Pods_Insterm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EF563BD7B4D4914CAFAFCA /* Pods_Insterm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CC18B31F99FF9BEAF0BADE4 /* Pods-Insterm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insterm.release.xcconfig"; path = "Target Support Files/Pods-Insterm/Pods-Insterm.release.xcconfig"; sourceTree = "<group>"; };
+		1FF2E452C83E81F6E2D0F7CE /* Pods-Insterm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insterm.debug.xcconfig"; path = "Target Support Files/Pods-Insterm/Pods-Insterm.debug.xcconfig"; sourceTree = "<group>"; };
 		2006A280294A71B500F7A288 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		207F7C42295795B50087F4F4 /* UIViewController+DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DismissKeyboard.swift"; sourceTree = "<group>"; };
 		209959B229466D6C00CCED84 /* SSHConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHConnection.swift; sourceTree = "<group>"; };
@@ -38,7 +40,7 @@
 		20A3FB182937F299008E5FBB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		20A3FB1A2937F2D3008E5FBB /* Terminal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Terminal.storyboard; sourceTree = "<group>"; };
 		20A3FB1C2937F30E008E5FBB /* TerminalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalViewController.swift; sourceTree = "<group>"; };
-		41173A4EEE4F53619B6BC610 /* Pods_TerminalApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TerminalApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23EF563BD7B4D4914CAFAFCA /* Pods_Insterm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Insterm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		482461BB66FD3F7305CA69DF /* Pods-TerminalApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TerminalApp.release.xcconfig"; path = "Target Support Files/Pods-TerminalApp/Pods-TerminalApp.release.xcconfig"; sourceTree = "<group>"; };
 		D1D4D82F63B3CDB357EE25EA /* Pods-TerminalApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TerminalApp.debug.xcconfig"; path = "Target Support Files/Pods-TerminalApp/Pods-TerminalApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,7 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				209959B12946676300CCED84 /* SwiftTerm in Frameworks */,
-				CD2E16F53AD4A714BB139BF1 /* Pods_TerminalApp.framework in Frameworks */,
+				C03B561BC436EF2350BC8918 /* Pods_Insterm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +117,8 @@
 			children = (
 				D1D4D82F63B3CDB357EE25EA /* Pods-TerminalApp.debug.xcconfig */,
 				482461BB66FD3F7305CA69DF /* Pods-TerminalApp.release.xcconfig */,
+				1FF2E452C83E81F6E2D0F7CE /* Pods-Insterm.debug.xcconfig */,
+				1CC18B31F99FF9BEAF0BADE4 /* Pods-Insterm.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -122,7 +126,7 @@
 		7297075B4A9BF6778B915D61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				41173A4EEE4F53619B6BC610 /* Pods_TerminalApp.framework */,
+				23EF563BD7B4D4914CAFAFCA /* Pods_Insterm.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,15 +213,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TerminalApp/Pods-TerminalApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Insterm/Pods-Insterm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TerminalApp/Pods-TerminalApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Insterm/Pods-Insterm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TerminalApp/Pods-TerminalApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Insterm/Pods-Insterm-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F7BA140366DE69AFE2D70593 /* [CP] Check Pods Manifest.lock */ = {
@@ -235,7 +239,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TerminalApp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Insterm-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -398,7 +402,7 @@
 		};
 		20A3FB1429369E59008E5FBB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1D4D82F63B3CDB357EE25EA /* Pods-TerminalApp.debug.xcconfig */;
+			baseConfigurationReference = 1FF2E452C83E81F6E2D0F7CE /* Pods-Insterm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -427,7 +431,7 @@
 		};
 		20A3FB1529369E59008E5FBB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 482461BB66FD3F7305CA69DF /* Pods-TerminalApp.release.xcconfig */;
+			baseConfigurationReference = 1CC18B31F99FF9BEAF0BADE4 /* Pods-Insterm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
