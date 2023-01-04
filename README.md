@@ -24,7 +24,7 @@ App Store: https://apps.apple.com/jp/app/insterm/id1662278977
 
 4. ライブラリのインストール
 
-- *pod install
+- *pod install*
 
 ##開発情報
 
@@ -38,11 +38,11 @@ App Store: https://apps.apple.com/jp/app/insterm/id1662278977
 | NMSSH | 2.3.1 |
 
 ## 使用ライブラリ
-*SwiftTerm*
+- *SwiftTerm*
 
 ターミナルエミュレーションを行うためのライブラリです。
 
-*NMSSH*
+- *NMSSH*
 
 SSH通信を行うためのライブラリです。
 
