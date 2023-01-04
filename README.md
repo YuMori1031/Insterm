@@ -52,3 +52,5 @@ GitHubを使用
 ## デザインパターン
 MVCモデルを使用
 
+## デモ画面
+![Simulator Screen Recording - iPhone SE (3rd generation) - 2023-01-05 at 07 59 59](https://user-images.githubusercontent.com/83987599/210666606-0e776a22-44a6-4ee3-a8fb-7ad9c005bbc0.gif)
