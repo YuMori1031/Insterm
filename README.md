@@ -53,7 +53,7 @@ GitHubを使用。
 MVCモデルを使用。
 
 ## 参考情報
-SSHサーバーの環境がない場合は、下記のような無料のサービスを利用を検討ください。
+SSHサーバーの環境がない場合は、下記のようなサービスを検討ください。
 - *SDF Public Access UNIX System: https://sdf.lonestar.org/*
 
 ## デモ画面
