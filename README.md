@@ -47,10 +47,14 @@ App Store: https://apps.apple.com/jp/app/insterm/id1662278977
 SSH通信を行うためのライブラリです。
 
 ## バージョン管理
-GitHubを使用
+GitHubを使用。
 
 ## デザインパターン
-MVCモデルを使用
+MVCモデルを使用。
+
+## 参考情報
+SSHサーバーの環境がない場合は、下記のような無料のサービスを利用を検討ください。
+- *SDF Public Access UNIX System: https://sdf.lonestar.org/*
 
 ## デモ画面
 ![Simulator Screen Recording - iPhone SE (3rd generation) - 2023-01-05 at 07 59 59](https://user-images.githubusercontent.com/83987599/210666606-0e776a22-44a6-4ee3-a8fb-7ad9c005bbc0.gif)
