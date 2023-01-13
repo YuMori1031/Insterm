@@ -19,6 +19,7 @@ class SSHTerminalView: TerminalView, TerminalViewDelegate, NMSSHChannelDelegate 
         self.connection = connection
         connection?.session.channel.delegate = self // NMSSHChannelDelegateを適用
         terminalDelegate = self // TerminalViewDelegateを適用
+        addGestureRecognizer(UIPinchGestureRecognizer(target: self, action: #selector(pinchInOut))) // ピンチ操作を適用
     }
     
     // Swiftの仕様でUIViewを継承したサブクラス（この場合はTerminalViewになる）で、上記のような初期化を定義すると下記メソッドの実装が必須となる模様
@@ -36,6 +37,28 @@ class SSHTerminalView: TerminalView, TerminalViewDelegate, NMSSHChannelDelegate 
     // データ受信時にエラーとなった場合に表示する
     func channel(_ channel: NMSSHChannel, didReadError error: String) {
         print("didReadError: \(error)")
+    }
+    
+    func isConnected() -> Bool {
+        if (connection != nil) {
+            return connection!.isConnected()
+        } else {
+            return false
+        }
+    }
+    
+    // ピンチイン・アウトでフォントサイズを変更
+    @objc func pinchInOut(_ gestureRecognizer: UIPinchGestureRecognizer) {
+        if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
+            let newSize = font.pointSize * gestureRecognizer.scale
+            gestureRecognizer.scale = 1.0
+            
+            if newSize < 10 || newSize > 40 {
+                return
+            }
+            
+            font = UIFont.monospacedSystemFont(ofSize: newSize, weight: .regular)
+        }
     }
     
     // 以下はTerminalViewDelegate適用時に実装する必要のある各種メソッド
