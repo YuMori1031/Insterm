@@ -40,24 +40,18 @@ class SSHTerminalView: TerminalView, TerminalViewDelegate, NMSSHChannelDelegate 
     }
     
     func isConnected() -> Bool {
-        if (connection != nil) {
-            return connection!.isConnected()
-        } else {
-            return false
-        }
+        return connection?.isConnected() ?? false
     }
     
     // ピンチイン・アウトでフォントサイズを変更
     @objc func pinchInOut(_ gestureRecognizer: UIPinchGestureRecognizer) {
-        if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
-            let newSize = font.pointSize * gestureRecognizer.scale
-            gestureRecognizer.scale = 1.0
-            
-            if newSize < 10 || newSize > 40 {
-                return
-            }
-            
+        guard gestureRecognizer.state == .began || gestureRecognizer.state == .changed else { return }
+        let newSize = font.pointSize * gestureRecognizer.scale
+        gestureRecognizer.scale = 1.0
+        
+        guard newSize < 10 || newSize > 40 else {
             font = UIFont.monospacedSystemFont(ofSize: newSize, weight: .regular)
+            return
         }
     }
     
