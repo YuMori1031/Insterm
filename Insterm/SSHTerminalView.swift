@@ -49,9 +49,8 @@ class SSHTerminalView: TerminalView, TerminalViewDelegate, NMSSHChannelDelegate 
         let newSize = font.pointSize * gestureRecognizer.scale
         gestureRecognizer.scale = 1.0
         
-        guard newSize < 10 || newSize > 40 else {
+        if newSize >= 10 && newSize <= 40  {
             font = UIFont.monospacedSystemFont(ofSize: newSize, weight: .regular)
-            return
         }
     }
     
