@@ -32,12 +32,16 @@ App Store: https://apps.apple.com/jp/app/insterm/id1662278977
 | ---- | ---- |
 | Xcode | 14.2 |
 | Swift | 5.7.2 |
-| iOS | 16.1以上 |
+| iOS | 15.0以上 |
 | CocoaPods | 1.11.3 |
 | SwiftTerm | 2.0 |
 | NMSSH | 2.3.1 |
 
 ## 使用ライブラリ
+- *LicensePlist*
+
+アプリで利用しているライブラリのライセンス一覧を生成するライブラリです。
+
 - *SwiftTerm*
 
 ターミナルエミュレーションを行うためのライブラリです。

@@ -6,6 +6,7 @@ target 'Insterm' do
   use_frameworks!
 
   # Pods for Insterm
+  pod 'LicensePlist'
   pod 'NMSSH'
 
 end
