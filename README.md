@@ -61,4 +61,4 @@ SSHサーバーの環境がない場合は、下記のようなサービスを�
 - *SDF Public Access UNIX System: https://sdf.lonestar.org/*
 
 ## デモ画面
-![Simulator Screen Recording - iPhone SE (3rd generation) - 2023-01-05 at 07 59 59](https://user-images.githubusercontent.com/83987599/210666606-0e776a22-44a6-4ee3-a8fb-7ad9c005bbc0.gif)
+![demo](https://user-images.githubusercontent.com/83987599/213577047-bf29b37b-b4de-4fba-962b-a558ffa0382e.gif)
