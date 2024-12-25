@@ -1,14 +1,69 @@
 {
+  "originHash" : "2408dead8f02c089fbbb053209d7c929d4d9879fc29c90abadf17f60f5540375",
   "pins" : [
+    {
+      "identity" : "libssh2prebuild",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MidoriMinato/Libssh2Prebuild",
+      "state" : {
+        "branch" : "master",
+        "revision" : "8f9e1e2957b0dedfc05d9cc3da8518141b3716b7"
+      }
+    },
+    {
+      "identity" : "licenselist",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cybozu/LicenseList.git",
+      "state" : {
+        "revision" : "37fd936bcc244a75ececf004d249519fb5f4b7d6",
+        "version" : "0.6.0"
+      }
+    },
+    {
+      "identity" : "nmssh",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MidoriMinato/NMSSH",
+      "state" : {
+        "revision" : "abab253de7731b2efed040b025a30486db6e2a2c",
+        "version" : "2.4.4"
+      }
+    },
+    {
+      "identity" : "shake-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/shakebugs/shake-ios",
+      "state" : {
+        "revision" : "5ae067621d4f1f7ac2255c252afcc510fbe38326",
+        "version" : "16.2.3"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-mobile-ads",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
+      "state" : {
+        "revision" : "9ab66e38f5f0c2d02f2b024b1babd880130f19bf",
+        "version" : "11.3.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-user-messaging-platform",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+      "state" : {
+        "revision" : "cfe8b2ae16b9bc81f4cdf1d1a12a01a452489c32",
+        "version" : "2.3.0"
+      }
+    },
     {
       "identity" : "swiftterm",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/migueldeicaza/SwiftTerm",
+      "location" : "https://github.com/migueldeicaza/SwiftTerm.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "d51163cdac466c0af39cde02cbb6cb630de92145"
+        "revision" : "0d31c2eea98e65ff1a34ec4a312099a8c25958b2",
+        "version" : "1.2.1"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
