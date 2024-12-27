@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Insterm
+
+  Created by Yusuke Mori on 2024/04/29.
+  
+*/
+
+NSUserTrackingUsageDescription = "「許可」すると、あなたに最適化された広告が表示されます。";
