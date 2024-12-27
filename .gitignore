@@ -1,5 +1,8 @@
 # Xcode
 
+# Ignore configuration files
+Config/Release.xcconfig
+
 ## Build generated
 build/
 DerivedData/

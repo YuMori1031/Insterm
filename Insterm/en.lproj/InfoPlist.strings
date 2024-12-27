@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Insterm
+
+  Created by Yusuke Mori on 2024/04/29.
+  
+*/
+
+NSUserTrackingUsageDescription = "If you allow it, it will be used to serve you personalized ads.";
