@@ -14,31 +14,20 @@ App Store: https://apps.apple.com/jp/app/insterm/id1662278977
 
 - *git clone https://github.com/YuMori1031/Insterm.git*
 
-2. cocoapodsをインストール 
+2. Swift Package Managerで依存関係を解決 
 
-- *sudo gem install cocoapods*
-
-3. cocoapodsをセットアップ
-
-- *pod setup*
-
-4. ライブラリのインストール
-
-- *pod install*
+- プロジェクトをXcodeで開き、必要なパッケージが自動で解決されることを確認してください。
 
 ##開発情報
 
 | 項目 | バージョン |
 | ---- | ---- |
-| Xcode | 14.2 |
-| Swift | 5.7.2 |
-| iOS | 15.0以上 |
-| CocoaPods | 1.11.3 |
-| SwiftTerm | 2.0 |
-| NMSSH | 2.3.1 |
+| Xcode | 16.2 |
+| Swift | 6.0.3 |
+| iOS | 17.0以上 |
 
 ## 使用ライブラリ
-- *LicensePlist*
+- *LicenseList*
 
 アプリで利用しているライブラリのライセンス一覧を生成するライブラリです。
 
@@ -50,15 +39,23 @@ App Store: https://apps.apple.com/jp/app/insterm/id1662278977
 
 SSH通信を行うためのライブラリです。
 
+- *Shake*
+
+アプリからバグ情報やフィードバック送信を行うためのライブラリです。
+
+- *GoogleMobileAds*
+
+アプリに広告を設置するためのライブラリです。
+
 ## バージョン管理
 GitHubを使用。
 
 ## デザインパターン
-MVCモデルを使用。
+MVモデルを使用。
 
 ## 参考情報
 SSHサーバーの環境がない場合は、下記のようなサービスを検討ください。
-- *SDF Public Access UNIX System: https://sdf.lonestar.org/*
+- *Test.Rebex.Net: https://test.rebex.net*
 
 ## デモ画面
-![demo](https://user-images.githubusercontent.com/83987599/213577047-bf29b37b-b4de-4fba-962b-a558ffa0382e.gif)
+![demo](https://github.com/user-attachments/assets/032bedd1-9426-4100-9f1d-2a10c4697dbd)
