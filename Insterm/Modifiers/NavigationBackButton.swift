@@ -13,7 +13,7 @@ struct NavigationBackButton: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .navigationBarBackButtonHidden(true)
+            .navigationBarBackButtonHidden(true) // *1...UINavigationController+Gesture
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { presentaion.wrappedValue.dismiss() }) {
