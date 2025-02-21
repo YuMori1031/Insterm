@@ -127,9 +127,9 @@ struct SSHSetupView: View {
                     }
                 }
             }
-            .onTapGesture {
+            .simultaneousGesture(TapGesture().onEnded {
                 focusedField = nil
-            }
+            })
             connectButton
         }
     }
