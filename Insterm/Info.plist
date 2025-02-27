@@ -2,14 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>SHAKE_CLIENT_ID</key>
-    <string>${SHAKE_CLIENT_ID}</string>
-    <key>SHAKE_CLIENT_SECRET</key>
-    <string>${SHAKE_CLIENT_SECRET}</string>
 	<key>GADApplicationIdentifier</key>
 	<string>${ADMOB_ID}</string>
 	<key>GADBannerIdentifier</key>
 	<string>$(BANNER_ID)</string>
+	<key>SHAKE_CLIENT_ID</key>
+	<string>${SHAKE_CLIENT_ID}</string>
+	<key>SHAKE_CLIENT_SECRET</key>
+	<string>${SHAKE_CLIENT_SECRET}</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
@@ -210,8 +210,6 @@
 		</dict>
 	</array>
 	<key>UIBackgroundModes</key>
-	<array>
-		<string>remote-notification</string>
-	</array>
+	<array/>
 </dict>
 </plist>
