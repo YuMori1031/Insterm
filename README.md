@@ -7,7 +7,7 @@ SSHを使用してリモートアクセスできるシンプルなSSHクライ�
 アプリにホスト名（IPアドレス等）、ユーザー名、パスワード、ポート番号を指定することで、SSHを使用してリモートログインができます。
 ログイン後はターミナル画面を表示して、コマンド操作を行うことができます。
 
-App Store: https://apps.apple.com/jp/app/insterm/id1662278977
+[![AppStore](./appstore-logo.png)](https://apps.apple.com/us/app/insterm/id6742595334)
 
 ## 環境構築
 1. リポジトリをclone 
@@ -48,14 +48,14 @@ SSH通信を行うためのライブラリです。
 アプリに広告を設置するためのライブラリです。
 
 ## バージョン管理
-GitHubを使用。
+- GitHubを使用
 
 ## デザインパターン
-MVモデルを使用。
+- MVモデルを使用
 
 ## 参考情報
 SSHサーバーの環境がない場合は、下記のようなサービスを検討ください。
-- *Test.Rebex.Net: https://test.rebex.net*
+- Test.Rebex.Net: *https://test.rebex.net*
 
 ## デモ画面
-![demo](https://github.com/user-attachments/assets/032bedd1-9426-4100-9f1d-2a10c4697dbd)
+<img width="300" src="https://github.com/user-attachments/assets/032bedd1-9426-4100-9f1d-2a10c4697dbd" >
