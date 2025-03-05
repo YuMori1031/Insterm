@@ -7,7 +7,7 @@ SSHを使用してリモートアクセスできるシンプルなSSHクライ�
 アプリにホスト名（IPアドレス等）、ユーザー名、パスワード、ポート番号を指定することで、SSHを使用してリモートログインができます。
 ログイン後はターミナル画面を表示して、コマンド操作を行うことができます。
 
-[![AppStore](./appstore-logo.png)](https://apps.apple.com/us/app/insterm/id6742595334)
+[![appstore-logo](https://github.com/user-attachments/assets/9d4462eb-8b41-4b8d-a1b0-7ee947911ebf)](https://apps.apple.com/us/app/insterm/id6742595334)
 
 ## 環境構築
 1. リポジトリをclone 
