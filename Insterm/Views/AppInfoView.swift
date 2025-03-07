@@ -11,7 +11,7 @@ import LicenseList
 
 struct AppInfoView: View {
     let items: [AppInfoModel] = [
-        AppInfoModel(title: String(localized: "Write a Review"), iconName: "pencil.circle.fill", destinationView: nil, url: URL(string: "https://apps.apple.com/app/id1662278977?action=write-review")),
+        AppInfoModel(title: String(localized: "Write a Review"), iconName: "pencil.circle.fill", destinationView: nil, url: URL(string: "https://apps.apple.com/app/id6742595334?action=write-review")),
         AppInfoModel(title: String(localized: "Developer"), iconName: "person.fill", destinationView: AnyView(WebViewContainer(url: URL(string:"https://www.yumori.dev")!, title: String(localized: "Developer"))), url: nil),
         AppInfoModel(title: String(localized: "Privacy Policy"), iconName: "lock.shield.fill", destinationView: AnyView(WebViewContainer(url: URL(string: "https://www.yumori.dev/privacy/insterm/")!, title: String(localized: "Privacy Policy"))), url: nil),
         AppInfoModel(title: String(localized: "Library"), iconName: "books.vertical.fill", destinationView: AnyView(LibraryView()), url: nil)
