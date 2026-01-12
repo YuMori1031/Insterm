@@ -23,7 +23,6 @@
 		138032B32B9512FF0014E9EA /* AppInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138032B22B9512FF0014E9EA /* AppInfoView.swift */; };
 		1387E5392BCDC6ED00191CE0 /* AdmobBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1387E5382BCDC6ED00191CE0 /* AdmobBannerModel.swift */; };
 		1387E53B2BCDC76300191CE0 /* AdmobBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1387E53A2BCDC76300191CE0 /* AdmobBannerView.swift */; };
-		1387E5412BCF219D00191CE0 /* LicenseList in Frameworks */ = {isa = PBXBuildFile; productRef = 1387E5402BCF219D00191CE0 /* LicenseList */; };
 		13893B8E2B3902C90037F0E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13893B8D2B3902C90037F0E7 /* LaunchScreen.storyboard */; };
 		139E261C2BB214D80047C294 /* SSHSetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E261B2BB214D80047C294 /* SSHSetupModel.swift */; };
 		13B935AB2BC9DD0B009D2949 /* SSHTerminalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B935AA2BC9DD0B009D2949 /* SSHTerminalModel.swift */; };
@@ -31,6 +30,7 @@
 		8DB339432BDDBFAD000E58FD /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8DB339422BDDBFAD000E58FD /* Localizable.xcstrings */; };
 		8DB339462BDF7928000E58FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8DB339442BDF7928000E58FD /* InfoPlist.strings */; };
 		AC641E842D67D22A00B6D3D9 /* UINavigationController+Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC641E832D67D22A00B6D3D9 /* UINavigationController+Gesture.swift */; };
+		AC9021152F136654005B4DB7 /* LicenseList in Frameworks */ = {isa = PBXBuildFile; productRef = AC9021142F136654005B4DB7 /* LicenseList */; };
 		DB750A622AF2E0D700F7E8E5 /* InstermApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750A612AF2E0D700F7E8E5 /* InstermApp.swift */; };
 		DB750A642AF2E0E300F7E8E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750A632AF2E0E300F7E8E5 /* ContentView.swift */; };
 		DB750A752AF2F47200F7E8E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB750A742AF2F47200F7E8E5 /* Preview Assets.xcassets */; };
@@ -98,7 +98,7 @@
 				1324953A2BB5667C00B7C1A3 /* NMSSH in Frameworks */,
 				1321332D2BBA01CE00D6DFD7 /* GoogleMobileAds in Frameworks */,
 				1324953D2BB566A500B7C1A3 /* libcrypto in Frameworks */,
-				1387E5412BCF219D00191CE0 /* LicenseList in Frameworks */,
+				AC9021152F136654005B4DB7 /* LicenseList in Frameworks */,
 				132495432BB566A500B7C1A3 /* libssl in Frameworks */,
 				132495372BB5667100B7C1A3 /* SwiftTerm in Frameworks */,
 				1324953F2BB566A500B7C1A3 /* libgit2 in Frameworks */,
@@ -261,7 +261,7 @@
 				132495422BB566A500B7C1A3 /* libssl */,
 				132495452BB566B000B7C1A3 /* Shake */,
 				1321332C2BBA01CE00D6DFD7 /* GoogleMobileAds */,
-				1387E5402BCF219D00191CE0 /* LicenseList */,
+				AC9021142F136654005B4DB7 /* LicenseList */,
 			);
 			productName = TerminalApp;
 			productReference = 20A3FAFF29369E56008E5FBB /* Insterm.app */;
@@ -311,7 +311,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1620;
+				LastUpgradeCheck = 2610;
 				TargetAttributes = {
 					20A3FAFE29369E56008E5FBB = {
 						CreatedOnToolsVersion = 14.1;
@@ -342,7 +342,7 @@
 				1324953B2BB566A500B7C1A3 /* XCRemoteSwiftPackageReference "Libssh2Prebuild" */,
 				132495442BB566B000B7C1A3 /* XCRemoteSwiftPackageReference "shake-ios" */,
 				1321332B2BBA01CE00D6DFD7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
-				1387E53F2BCF219D00191CE0 /* XCRemoteSwiftPackageReference "LicenseList" */,
+				AC9021132F136654005B4DB7 /* XCRemoteSwiftPackageReference "LicenseList" */,
 			);
 			productRefGroup = 20A3FB0029369E56008E5FBB /* Products */;
 			projectDirPath = "";
@@ -487,6 +487,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = PHRCK7J5L6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -507,6 +508,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -549,6 +551,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = PHRCK7J5L6;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -562,6 +565,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -575,9 +579,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.0.2.1;
+				CURRENT_PROJECT_VERSION = 2.0.3.1;
 				DEVELOPMENT_ASSET_PATHS = "\"Insterm/Preview Content\"";
-				DEVELOPMENT_TEAM = PHRCK7J5L6;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -588,14 +591,13 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.0.3;
 				OTHER_LDFLAGS = (
 					"-fprofile-instr-generate",
 					"-ObjC",
@@ -625,9 +627,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.0.2.1;
+				CURRENT_PROJECT_VERSION = 2.0.3.1;
 				DEVELOPMENT_ASSET_PATHS = "\"Insterm/Preview Content\"";
-				DEVELOPMENT_TEAM = PHRCK7J5L6;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Insterm/Info.plist;
@@ -637,14 +638,13 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.0.3;
 				OTHER_LDFLAGS = (
 					"-fprofile-instr-generate",
 					"-ObjC",
@@ -673,7 +673,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PHRCK7J5L6;
 				GENERATE_INFOPLIST_FILE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
@@ -695,7 +694,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PHRCK7J5L6;
 				GENERATE_INFOPLIST_FILE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
@@ -715,7 +713,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PHRCK7J5L6;
 				GENERATE_INFOPLIST_FILE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
@@ -736,7 +733,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PHRCK7J5L6;
 				GENERATE_INFOPLIST_FILE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
@@ -833,12 +829,12 @@
 				minimumVersion = 16.2.3;
 			};
 		};
-		1387E53F2BCF219D00191CE0 /* XCRemoteSwiftPackageReference "LicenseList" */ = {
+		AC9021132F136654005B4DB7 /* XCRemoteSwiftPackageReference "LicenseList" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/cybozu/LicenseList.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.6.0;
+				minimumVersion = 2.2.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -884,9 +880,9 @@
 			package = 132495442BB566B000B7C1A3 /* XCRemoteSwiftPackageReference "shake-ios" */;
 			productName = Shake;
 		};
-		1387E5402BCF219D00191CE0 /* LicenseList */ = {
+		AC9021142F136654005B4DB7 /* LicenseList */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1387E53F2BCF219D00191CE0 /* XCRemoteSwiftPackageReference "LicenseList" */;
+			package = AC9021132F136654005B4DB7 /* XCRemoteSwiftPackageReference "LicenseList" */;
 			productName = LicenseList;
 		};
 /* End XCSwiftPackageProductDependency section */
